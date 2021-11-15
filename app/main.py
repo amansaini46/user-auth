@@ -1,6 +1,5 @@
 from fastapi import FastAPI
 from sqlalchemy import engine
-#from sqlalchemy.orm import Session
 from . import models
 from .database import engine
 from .db import init_blacklist_file
