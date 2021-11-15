@@ -3,10 +3,10 @@
 #### Usage
 
 ```ShellSession
-# Clone Repo``
+# Clone Repo
 git clone https://github.com/amansaini46/user-auth.git
 
-# cd   ``user-auth``
+# cd  user-auth
 cd user-auth
 
 # run the postgress

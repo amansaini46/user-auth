@@ -26,7 +26,7 @@ def verify_token(token: str, credentails_exception):
         id: str = payload.get("user_id")
         if id is None:
             raise credentails_exception
-        token_data = TokenData(id=id)
+        token_data = TokenData(id=id, token=token)
     except JWTError:
         raise credentails_exception
     return token_data
