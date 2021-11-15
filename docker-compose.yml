@@ -10,3 +10,19 @@ services:
       - $PWD/postgres/data:/var/lib/postgresql/data
     env_file:
       - $PWD/postgres/postgres.env
+    networks:
+      - apis
+  api:
+    build: .
+    image: user-auth
+    container_name: user-auth-api
+    ports:
+      - 8000:8000
+    networks:
+      - apis
+    depends_on:
+      - db
+
+networks:
+  apis:
+    driver: bridge
