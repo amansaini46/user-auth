@@ -13,11 +13,3 @@ class User(Base):
                      nullable=False, server_default=text('now()'))
     created_at = Column(TIMESTAMP(timezone=True),
                         nullable=False, server_default=text('now()'))
-
-
-class UserStatus(Base):
-    __tablename__ = "status"
-
-    id = Column(Integer, primary_key=True, nullable=False)
-    last_checkin = Column(TIMESTAMP(timezone=True),
-                          nullable=False, server_default=text('now()'))
